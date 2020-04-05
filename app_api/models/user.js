@@ -6,5 +6,4 @@ let userSchema = new mongoose.Schema({
 });
 
 
-// компиляция модели
 mongoose.model('user', userSchema );

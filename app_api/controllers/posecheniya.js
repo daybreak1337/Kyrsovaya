@@ -40,8 +40,6 @@ module.exports.create = async (req, res, next) => {
         return;
     }
 
-    // вот тут ошибка, например...
-    // h.sendJsonResponse(res,406, {status: "error", message: "какая-то ошибка"});
 
     posecheniya.create(req.body, (err, posecheniya) => {
         if(err){

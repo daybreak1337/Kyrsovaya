@@ -83,7 +83,6 @@ function updateCtrl($http, $location, $routeParams) {
             $location.path('/');
         }, err=>{
             vm.error = 'Ошибка: ' + JSON.stringify(err);
-            //console.log('error add posecheniya: ', err);
         });
     };
 
@@ -100,7 +99,6 @@ function updateCtrl($http, $location, $routeParams) {
         });
 
         p1.then(res=>{
-            //console.log('success!');
             const oneRow = res.data;
             vm.formModel.fio.value = oneRow.fio;
             vm.formModel.adress.value = oneRow.adress;
@@ -112,7 +110,6 @@ function updateCtrl($http, $location, $routeParams) {
             vm.validate();
         }, err=>{
             vm.error = 'Ошибка: ' + JSON.stringify(err);
-            //console.log('error add posecheniya: ', err);
         });
     }
 

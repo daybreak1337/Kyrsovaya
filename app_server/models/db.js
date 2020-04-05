@@ -2,7 +2,6 @@ let mongoose = require( 'mongoose' );
 var debug = require('debug')('pks16-2_kr:server');
 
 let dbURI = 'mongodb://localhost/nntc';
-//let dbURI = 'mongodb://172.16.155.12/DBIvanov';
 
 mongoose.connect(dbURI);
 

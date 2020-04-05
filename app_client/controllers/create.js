@@ -40,7 +40,7 @@ function createCtrl($http, $location) {
         dateofbirth: {
             valid: true,
             infoText: '',
-            value: new Date(Date.now() + 6 * 24 * 60 * 60 * 1000)
+            value: new Date(Date.now())
         }
     };
 
@@ -83,7 +83,6 @@ function createCtrl($http, $location) {
             $location.path('/');
         }, err=>{
             vm.error = 'Ошибка: ' + JSON.stringify(err);
-            //console.log('error add posecheniya: ', err);
         });
     }
 

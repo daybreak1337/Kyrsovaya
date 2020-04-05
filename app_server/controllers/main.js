@@ -1,8 +1,4 @@
 let mongoose = require('mongoose');
-
-//let config = mongoose.model('config');
-//let posecheniya = mongoose.model('posecheniya');
-
 module.exports.index = (req, res, next) => {
 
     // основные операции с данными с MongoDB

@@ -48,9 +48,6 @@ function loginCtrl($http, $location, $scope) {
         }, err=>{
             console.log('error add posecheniya: ', err);
             vm.error = 'Ошибка: ' + JSON.stringify(err);
-            // setTimeout(()=>{
-            //     $scope.$apply();
-            // },10);
 
         });
     }

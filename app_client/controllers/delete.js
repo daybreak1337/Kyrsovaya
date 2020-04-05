@@ -24,7 +24,6 @@ function deleteCtrl($http, $location, $routeParams) {
             $location.path('/');
         }, err=>{
             vm.error = 'Ошибка: ' + JSON.stringify(err);
-            //console.log('error : ', err);
         });
     };
 
@@ -45,7 +44,6 @@ function deleteCtrl($http, $location, $routeParams) {
             vm.formModel.dateofbirth.value = new Date(oneRow.dateofbirth);
         }, err=>{
             vm.error = 'Ошибка: ' + JSON.stringify(err);
-            //console.log('error: ', err);
         });
     }
 
