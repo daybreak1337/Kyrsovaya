@@ -1,0 +1,61 @@
+<ng-include src="'views/mainMenu.html'"></ng-include>
+<h2>{{ vm.title }}</h2>
+
+<form ng-class="(vm.formWasValidated) ? 'was-validated': ''" class="needs-validation" ng-submit="vm.sendForm()" novalidate>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="name">ФИО</label>
+            <input ng-class="(vm.formModel.name.valid) ? '': 'is-invalid'"  ng-model="vm.formModel.name.value"
+                   type="text" class="form-control" id="name" ng-keyup="vm.validate()">
+            <div ng-class="(vm.formModel.name.valid && vm.formWasValidated) ? 'valid-feedback': 'invalid-feedback'">
+                {{vm.formModel.name.infoText}}
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="address">Адрес</label>
+            <input ng-class="(vm.formModel.address.valid) ? '': 'is-invalid'" ng-model="vm.formModel.address.value"
+                   type="text" class="form-control" id="address" ng-keyup="vm.validate()">
+            <div ng-class="(vm.formModel.address.valid && vm.formWasValidated) ? 'valid-feedback': 'invalid-feedback'">
+                {{vm.formModel.address.infoText}}
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="doctor">Врач</label>
+            <input ng-class="(vm.formModel.doctor.valid) ? '': 'is-invalid'" ng-model="vm.formModel.doctor.value"
+                   ng-keyup="vm.validate()" type="text" class="form-control" id="doctor" value="ФИО">
+            <div ng-class="(vm.formModel.doctor.valid && vm.formWasValidated) ? 'valid-feedback': 'invalid-feedback'">
+                {{vm.formModel.doctor.infoText}}
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-3 mb-4">
+            <label for="group">Группа</label>
+            <input ng-class="(vm.formModel.group.valid) ? '': 'is-invalid'" ng-model="vm.formModel.group.value"
+                   ng-keyup="vm.validate()" type="text" class="form-control" id="group">
+            <div ng-class="(vm.formModel.group.valid && vm.formWasValidated) ? 'valid-feedback': 'invalid-feedback'">
+                {{vm.formModel.group.infoText}}
+            </div>
+        </div>
+        <div class="col-md-5 mb-4">
+            <label for="spec">Специальность</label>
+            <input ng-class="(vm.formModel.spec.valid) ? '': 'is-invalid'" ng-model="vm.formModel.spec.value"
+                   ng-keyup="vm.validate()" type="text" class="form-control" id="spec" >
+            <div ng-class="(vm.formModel.spec.valid && vm.formWasValidated) ? 'valid-feedback': 'invalid-feedback'">
+                {{vm.formModel.spec.infoText}}
+            </div>
+        </div>
+        <div class="col-md-2 mb-4">
+            <label for="date-start">Дата посещения</label>
+            <input ng-model="vm.formModel.dateStart.value" type="date" class="form-control" id="date-start">
+<!--            <div class="valid-feedback">-->
+<!--                Looks good!-->
+<!--            </div>-->
+        </div>
+    </div>
+    <button ng-disabled="!vm.formWasValidated" class="btn btn-primary" type="submit">Добавить</button>
+</form>
+
+<div ng-show="vm.error.length" class="alert alert-danger" role="alert">
+    {{vm.error}}
+</div>

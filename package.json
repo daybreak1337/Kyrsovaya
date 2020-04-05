@@ -1,0 +1,25 @@
+{
+  "name": "pks16-2_kr",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "updateWebdriver": "webdriver-manager update",
+    "e2etest": "protractor e2e-tests/protractor.conf.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "crypto": "^1.0.1",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.7.6",
+    "morgan": "~1.9.1",
+    "pug": "^2.0.4",
+    "readline": "0.0.x"
+  },
+  "devDependencies": {
+    "protractor": "^5.4.3",
+    "jasmine-core": "^3.5.0"
+  }
+}

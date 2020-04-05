@@ -1,0 +1,41 @@
+<ng-include src="'views/mainMenu.html'"></ng-include>
+
+<h2>{{ vm.title }}</h2>
+
+{{vm.test}}
+
+<div ng-hide="vm.list.length" class="alert alert-primary" role="alert">
+    Пока нет ни одной записи. Добавьте что-нибудь
+</div>
+
+<table ng-show="vm.list.length" class="table table-striped table-bordered table-sm table-responsive">
+    <thead>
+    <tr>
+<!--        <th>id</th>-->
+        <th>Название</th>
+        <th>Руководитель</th>
+        <th>Студент</th>
+        <th>Группа</th>
+        <th>Специальность</th>
+        <th>Дата начала</th>
+        <th>Дата завершения</th>
+        <th>Действия</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="line in vm.list">
+<!--        <td>{{line._id}}</td>-->
+        <td>{{line.name}}</td>
+        <td>{{line.address}}</td>
+        <td>{{line.doctor}}</td>
+        <td>{{line.group}}</td>
+        <td>{{line.spec}}</td>
+        <td>{{line.dateStart}}</td>
+        <td>{{line.dateFinish}}</td>
+        <td>
+            <a href="/#!/update/{{line._id}}" class="btn btn-warning btn-sm">Изменить</a>
+            <a href="/#!/delete/{{line._id}}" class="btn btn-danger btn-sm">Удалить</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
