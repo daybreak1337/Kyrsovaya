@@ -1,7 +1,7 @@
 let mongoose = require('mongoose');
 
 //let config = mongoose.model('config');
-//let practic = mongoose.model('practic');
+//let posecheniya = mongoose.model('posecheniya');
 
 module.exports.index = (req, res, next) => {
 
@@ -27,10 +27,10 @@ module.exports.index = (req, res, next) => {
     //
     // });
 
-    // создание записи в коллекции practic:
+    // создание записи в коллекции posecheniya:
 
     // // объект для вставки в базу данных
-    // let practicRecord = {
+    // let posecheniyaRecord = {
     //     fio: "по ПМ.02 Осуществление интеграции программных модулей",
     //     //adress: ,
     //     doctor: "Фамилия Имя Отчество",
@@ -42,7 +42,7 @@ module.exports.index = (req, res, next) => {
     // };
     //
     // // вызываем метод create модели config
-    // practic.create(practicRecord, (err, config) => {
+    // posecheniya.create(posecheniyaRecord, (err, config) => {
     //     // коллбэк при добавлении данных
     //     if(err){
     //         // если есть о
@@ -53,8 +53,8 @@ module.exports.index = (req, res, next) => {
     //
     // });
 
-    // изменение записи в коллекции practic:
-    // practic.deleteMany({adress: "Неизвестный Адрес"}, (err) => {
+    // изменение записи в коллекции posecheniya:
+    // posecheniya.deleteMany({adress: "Неизвестный Адрес"}, (err) => {
     //         // коллбэк при удалении данных
     //         if (err) {
     //             // если есть ошибка

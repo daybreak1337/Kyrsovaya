@@ -63,7 +63,7 @@ function updateCtrl($http, $location, $routeParams) {
 
         vm.error = '';
         console.log('waiting...');
-        let p1 = $http.put('/api/practics/' + id, {
+        let p1 = $http.put('/api/posecheniya/' + id, {
             fio: vm.formModel.fio.value,
             adress: vm.formModel.adress.value,
             doctor: vm.formModel.doctor.value,
@@ -83,7 +83,7 @@ function updateCtrl($http, $location, $routeParams) {
             $location.path('/');
         }, err=>{
             vm.error = 'Ошибка: ' + JSON.stringify(err);
-            //console.log('error add practic: ', err);
+            //console.log('error add posecheniya: ', err);
         });
     };
 
@@ -93,7 +93,7 @@ function updateCtrl($http, $location, $routeParams) {
         console.log('waiting...');
 
 
-        let p1 = $http.get('/api/practics/' + id, {
+        let p1 = $http.get('/api/posecheniya/' + id, {
             headers : {
                 token: localStorage.getItem('token')
             }
@@ -112,7 +112,7 @@ function updateCtrl($http, $location, $routeParams) {
             vm.validate();
         }, err=>{
             vm.error = 'Ошибка: ' + JSON.stringify(err);
-            //console.log('error add practic: ', err);
+            //console.log('error add posecheniya: ', err);
         });
     }
 

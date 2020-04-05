@@ -1,6 +1,6 @@
 let mongoose = require( 'mongoose' );
 
-let practicSchema = new mongoose.Schema({
+let posecheniyaSchema = new mongoose.Schema({
     fio: {type: String, required: true},
     adress: {type: String, required: true, default: "Неизвестный Адрес"},
     doctor: {type: String, required: true},
@@ -13,7 +13,7 @@ let practicSchema = new mongoose.Schema({
 });
 
 // компиляция модели
-mongoose.model('practic', practicSchema );
+mongoose.model('posecheniya', posecheniyaSchema );
 
 // наименование: "по ПМ.02 Осуществление интеграции программных модулей"
 // обучающийся: "Фамилия Имя Отчество"

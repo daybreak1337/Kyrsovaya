@@ -61,7 +61,7 @@ function signupCtrl($http, $location) {
             //const data = res.data;
             $location.path('/login');
         }, err=>{
-            console.log('error add practic: ', err);
+            console.log('error add posecheniya: ', err);
             vm.error = 'Ошибка: ' + JSON.stringify(err);
         });
     }

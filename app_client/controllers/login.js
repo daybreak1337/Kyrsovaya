@@ -46,7 +46,7 @@ function loginCtrl($http, $location, $scope) {
             localStorage.setItem('token', data.token);
             $location.path('/');
         }, err=>{
-            console.log('error add practic: ', err);
+            console.log('error add posecheniya: ', err);
             vm.error = 'Ошибка: ' + JSON.stringify(err);
             // setTimeout(()=>{
             //     $scope.$apply();

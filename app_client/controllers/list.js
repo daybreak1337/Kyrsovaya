@@ -2,10 +2,10 @@ function listCtrl($http, $location, $rootScope) {
 
 
     let vm = this;
-    vm.title = "Список практик";
+    vm.title = "Список посещений";
 
     //console.log('waiting...');
-    let p1 = $http.get('/api/practics', {
+    let p1 = $http.get('/api/posecheniya', {
         headers : {
             token: localStorage.getItem('token')
         }

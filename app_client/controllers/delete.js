@@ -13,7 +13,7 @@ function deleteCtrl($http, $location, $routeParams) {
     vm.sendForm = function () {
         vm.error = '';
         console.log('waiting...');
-        let p1 = $http.delete('/api/practics/' + id, {
+        let p1 = $http.delete('/api/posecheniya/' + id, {
             headers : {
                 token: localStorage.getItem('token')
             }
@@ -32,7 +32,7 @@ function deleteCtrl($http, $location, $routeParams) {
         vm.error = '';
         console.log('waiting...');
 
-        let p1 = $http.get('/api/practics/' + id, {
+        let p1 = $http.get('/api/posecheniya/' + id, {
             headers : {
                 token: localStorage.getItem('token')
             }

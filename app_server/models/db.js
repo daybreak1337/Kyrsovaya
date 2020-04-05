@@ -56,4 +56,4 @@ process.on('SIGTERM', () => {
 });
 
 require('./config');
-require('./practic');
+require('./posecheniya');

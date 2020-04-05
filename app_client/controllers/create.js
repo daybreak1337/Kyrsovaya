@@ -63,7 +63,7 @@ function createCtrl($http, $location) {
         vm.error = '';
 
         console.log('waiting...');
-        let p1 = $http.post('/api/practics', {
+        let p1 = $http.post('/api/posecheniya', {
             fio: vm.formModel.fio.value,
             adress: vm.formModel.adress.value,
             doctor: vm.formModel.doctor.value,
@@ -83,7 +83,7 @@ function createCtrl($http, $location) {
             $location.path('/');
         }, err=>{
             vm.error = 'Ошибка: ' + JSON.stringify(err);
-            //console.log('error add practic: ', err);
+            //console.log('error add posecheniya: ', err);
         });
     }
 
