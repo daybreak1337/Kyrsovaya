@@ -6,5 +6,4 @@ let tokenSchema = new mongoose.Schema({
     expired: {type: Number, required: true}
 });
 
-// компиляция модели
 mongoose.model('token', tokenSchema );

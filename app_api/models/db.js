@@ -3,7 +3,6 @@ mongoose.set('useCreateIndex', true);
 var debug = require('debug')('pks16-2_kr:server');
 
 let dbURI = 'mongodb://localhost/nntc';
-//let dbURI = 'mongodb://172.16.155.12/DBIvanov';
 
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true});
 
