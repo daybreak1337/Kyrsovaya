@@ -63,8 +63,8 @@ module.exports.update = async (req, res, next) => {
             h.sendJsonResponse(res,400, err);
         }
 
-        if(req.body.name){
-            practic.name = req.body.name;
+        if(req.body.fio){
+            practic.fio = req.body.fio;
         }
         if(req.body.adress){
             practic.adress = req.body.adress;
@@ -72,8 +72,8 @@ module.exports.update = async (req, res, next) => {
         if(req.body.doctor){
             practic.doctor = req.body.doctor;
         }
-        if(req.body.group){
-            practic.group = req.body.group;
+        if(req.body.snils){
+            practic.snils = req.body.snils;
         }
         if(req.body.passport){
             practic.passport = req.body.passport;
