@@ -4,7 +4,7 @@
 <form ng-class="(vm.formWasValidated) ? 'was-validated': ''" class="needs-validation" ng-submit="vm.sendForm()" novalidate>
     <div class="form-row">
         <div class="col-md-6 mb-3">
-            <label for="fio">Название</label>
+            <label for="fio">ФИО</label>
             <input ng-class="(vm.formModel.fio.valid) ? '': 'is-invalid'"  ng-model="vm.formModel.fio.value"
                    type="text" class="form-control" id="fio" ng-keyup="vm.validate()">
             <div ng-class="(vm.formModel.fio.valid && vm.formWasValidated) ? 'valid-feedback': 'invalid-feedback'">
@@ -12,7 +12,7 @@
             </div>
         </div>
         <div class="col-md-3 mb-3">
-            <label for="adress">Руководитель</label>
+            <label for="adress">Адрес</label>
             <input ng-class="(vm.formModel.adress.valid) ? '': 'is-invalid'" ng-model="vm.formModel.adress.value"
                    type="text" class="form-control" id="adress" ng-keyup="vm.validate()">
             <div ng-class="(vm.formModel.adress.valid && vm.formWasValidated) ? 'valid-feedback': 'invalid-feedback'">
@@ -20,7 +20,7 @@
             </div>
         </div>
         <div class="col-md-3 mb-3">
-            <label for="doctor">Студент</label>
+            <label for="doctor">Врач</label>
             <input ng-class="(vm.formModel.doctor.valid) ? '': 'is-invalid'" ng-model="vm.formModel.doctor.value"
                    ng-keyup="vm.validate()" type="text" class="form-control" id="doctor" value="ФИО">
             <div ng-class="(vm.formModel.doctor.valid && vm.formWasValidated) ? 'valid-feedback': 'invalid-feedback'">
@@ -30,7 +30,7 @@
     </div>
     <div class="form-row">
         <div class="col-md-3 mb-4">
-            <label for="snils">Группа</label>
+            <label for="snils">Снилс</label>
             <input ng-class="(vm.formModel.snils.valid) ? '': 'is-invalid'" ng-model="vm.formModel.snils.value"
                    ng-keyup="vm.validate()" type="text" class="form-control" id="snils">
             <div ng-class="(vm.formModel.snils.valid && vm.formWasValidated) ? 'valid-feedback': 'invalid-feedback'">
@@ -38,7 +38,7 @@
             </div>
         </div>
         <div class="col-md-5 mb-4">
-            <label for="passport">Специальность</label>
+            <label for="passport">Номер Паспорта</label>
             <input ng-class="(vm.formModel.passport.valid) ? '': 'is-invalid'" ng-model="vm.formModel.passport.value"
                    ng-keyup="vm.validate()" type="text" class="form-control" id="passport" >
             <div ng-class="(vm.formModel.passport.valid && vm.formWasValidated) ? 'valid-feedback': 'invalid-feedback'">
@@ -46,14 +46,14 @@
             </div>
         </div>
         <div class="col-md-2 mb-4">
-            <label for="datePosesh">Дата начала</label>
+            <label for="datePosesh">Дата посещения</label>
             <input ng-model="vm.formModel.datePosesh.value" type="date" class="form-control" id="datePosesh">
             <!--            <div class="valid-feedback">-->
             <!--                Looks good!-->
             <!--            </div>-->
         </div>
         <div class="col-md-2 mb-4">
-            <label for="dateofbirth">Дата завершения</label>
+            <label for="dateofbirth">Дата рождения</label>
             <input ng-model="vm.formModel.dateofbirth.value" type="date" class="form-control" id="dateofbirth">
             <!--            <div class="valid-feedback">-->
             <!--                Looks good!-->

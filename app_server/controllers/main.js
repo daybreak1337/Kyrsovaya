@@ -54,7 +54,7 @@ module.exports.index = (req, res, next) => {
     // });
 
     // изменение записи в коллекции practic:
-    // practic.deleteMany({adress: "Неизвестный руководитель"}, (err) => {
+    // practic.deleteMany({adress: "Неизвестный Адрес"}, (err) => {
     //         // коллбэк при удалении данных
     //         if (err) {
     //             // если есть ошибка
