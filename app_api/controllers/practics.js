@@ -66,8 +66,8 @@ module.exports.update = async (req, res, next) => {
         if(req.body.name){
             practic.name = req.body.name;
         }
-        if(req.body.address){
-            practic.address = req.body.address;
+        if(req.body.adress){
+            practic.adress = req.body.adress;
         }
         if(req.body.doctor){
             practic.doctor = req.body.doctor;
@@ -75,17 +75,17 @@ module.exports.update = async (req, res, next) => {
         if(req.body.group){
             practic.group = req.body.group;
         }
-        if(req.body.spec){
-            practic.spec = req.body.spec;
+        if(req.body.passport){
+            practic.passport = req.body.passport;
         }
-        if(req.body.dateStart){
-            practic.dateStart = req.body.dateStart;
+        if(req.body.datePosesh){
+            practic.datePosesh = req.body.datePosesh;
         }
-        if(req.body.dateFinish){
-            practic.dateFinish = req.body.dateFinish;
+        if(req.body.dateofbirth){
+            practic.dateofbirth = req.body.dateofbirth;
         }
-        if(req.body.mark){
-            practic.mark = req.body.mark;
+        if(req.body.marker){
+            practic.marker = req.body.marker;
         }
 
         practic.save((err, practic) => {

@@ -2,13 +2,13 @@ let mongoose = require( 'mongoose' );
 
 let practicSchema = new mongoose.Schema({
     name: {type: String, required: true},
-    address: {type: String, required: true, default: "Неизвестный руководитель"},
+    adress: {type: String, required: true, default: "Неизвестный руководитель"},
     doctor: {type: String, required: true},
     group: {type: String, required: true},
-    spec: {type: String, required: true},
-    dateStart: {type: Date, required: true, default: Date.now},
-    dateFinish: {type: Date, required: true},
-    mark: {type: Number, required: true},
+    passport: {type: String, required: true},
+    datePosesh: {type: Date, required: true, default: Date.now},
+    dateofbirth: {type: Date, required: true},
+    marker: {type: Number, required: true},
     userId: {type: Number, required: false}
 });
 

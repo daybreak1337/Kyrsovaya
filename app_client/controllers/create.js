@@ -7,12 +7,12 @@ function createCtrl($http, $location) {
     vm.formWasValidated = false;
 
     vm.formModel = {
-        name: {
+        fio: {
             valid: true,
             infoText: '',
             value: ''
         },
-        address: {
+        adress: {
             valid: true,
             infoText: '',
             value: ''
@@ -22,22 +22,22 @@ function createCtrl($http, $location) {
             infoText: '',
             value: ''
         },
-        group: {
+        snils: {
             valid: true,
             infoText: '',
             value: ''
         },
-        spec: {
+        passport: {
             valid: true,
             infoText: '',
             value: ''
         },
-        dateStart: {
+        datePosesh: {
             valid: true,
             infoText: '',
             value: new Date()
         },
-        dateFinish: {
+        dateofbirth: {
             valid: true,
             infoText: '',
             value: new Date(Date.now() + 6 * 24 * 60 * 60 * 1000)
@@ -50,7 +50,7 @@ function createCtrl($http, $location) {
         const onlyLettersAndDigits = /^([-\.a-zа-яё \d]+)$/i;
 
         for (let field in vm.formModel){
-            if(field!=='dateStart' && field!=='dateFinish'){
+            if(field!=='datePosesh' && field!=='dateofbirth'){
                 vm.formModel[field].valid = onlyLettersAndDigits.test(vm.formModel[field].value);
                 vm.formModel[field].infoText = (vm.formModel[field].valid) ? 'Введено верно' : 'Допускаются только буквы и цифры';
                 vm.formWasValidated = vm.formWasValidated && vm.formModel[field].valid;
@@ -64,14 +64,14 @@ function createCtrl($http, $location) {
 
         console.log('waiting...');
         let p1 = $http.post('/api/practics', {
-            name: vm.formModel.name.value,
-            address: vm.formModel.address.value,
+            fio: vm.formModel.fio.value,
+            adress: vm.formModel.adress.value,
             doctor: vm.formModel.doctor.value,
-            group: vm.formModel.group.value,
-            spec: vm.formModel.spec.value,
-            dateStart: vm.formModel.dateStart.value,
-            dateFinish: vm.formModel.dateFinish.value,
-            mark: 0
+            snils: vm.formModel.snils.value,
+            passport: vm.formModel.passport.value,
+            datePosesh: vm.formModel.datePosesh.value,
+            dateofbirth: vm.formModel.dateofbirth.value,
+            marker: 0
         }, {
             headers : {
                 token: localStorage.getItem('token')

@@ -25,13 +25,13 @@
     <tbody>
     <tr ng-repeat="line in vm.list">
 <!--        <td>{{line._id}}</td>-->
-        <td>{{line.name}}</td>
-        <td>{{line.address}}</td>
+        <td>{{line.fio}}</td>
+        <td>{{line.adress}}</td>
         <td>{{line.doctor}}</td>
-        <td>{{line.group}}</td>
-        <td>{{line.spec}}</td>
-        <td>{{line.dateStart}}</td>
-        <td>{{line.dateFinish}}</td>
+        <td>{{line.snils}}</td>
+        <td>{{line.passport}}</td>
+        <td>{{line.datePosesh}}</td>
+        <td>{{line.dateofbirth}}</td>
         <td>
             <a href="/#!/update/{{line._id}}" class="btn btn-warning btn-sm">Изменить</a>
             <a href="/#!/delete/{{line._id}}" class="btn btn-danger btn-sm">Удалить</a>

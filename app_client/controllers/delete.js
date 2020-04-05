@@ -5,9 +5,9 @@ function deleteCtrl($http, $location, $routeParams) {
     const id = $routeParams.id;
 
     vm.formModel = {
-        name: {},
-        dateStart: {},
-        dateFinish: {}
+        fio: {},
+        datePosesh: {},
+        dateofbirth: {}
     };
 
     vm.sendForm = function () {
@@ -40,9 +40,9 @@ function deleteCtrl($http, $location, $routeParams) {
 
         p1.then(res=>{
             const oneRow = res.data;
-            vm.formModel.name.value = oneRow.name;
-            vm.formModel.dateStart.value = new Date(oneRow.dateStart);
-            vm.formModel.dateFinish.value = new Date(oneRow.dateFinish);
+            vm.formModel.fio.value = oneRow.fio;
+            vm.formModel.datePosesh.value = new Date(oneRow.datePosesh);
+            vm.formModel.dateofbirth.value = new Date(oneRow.dateofbirth);
         }, err=>{
             vm.error = 'Ошибка: ' + JSON.stringify(err);
             //console.log('error: ', err);
